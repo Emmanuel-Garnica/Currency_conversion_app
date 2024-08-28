@@ -9,12 +9,22 @@ Below some important information to keep in mind:
 
 1. Clone the repository.
 2. Download `.env` file from the email and paste it into project's root folder.
-3. Install project dependencies:
+3. Install project dependencies (examples with npm and pnpm):
     ```sh
-     npm install / pnpm install
+     npm install
      ```
-4. Start project locally with the following command:
+    or
+   
+    ```sh
+     pnpm install
+     ```
+5. Start project locally with the following command (examples with npm and pnpm):
    ```sh
-   npm run dev / pnpm run dev
+   npm run dev
    ```
-5. Open your localhost with `ctrl+click o command+click` over the URL and enjoy 🚀!
+   or
+   
+   ```sh
+   pnpm run dev
+   ```
+7. Open your localhost with `ctrl+click o command+click` over the URL and enjoy 🚀!
