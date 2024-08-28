@@ -8,12 +8,13 @@ Below some important information to keep in mind:
 ## Local installation instructions:
 
 1. Clone the repository.
-2. Install project dependencies:
+2. Download `.env` file from the email and paste into project's root folder.
+3. Install project dependencies:
     ```sh
      npm install
      ```
-3. Start project locally with the following command:
+4. Start project locally with the following command:
    ```sh
    npm run dev
    ```
-4. Open your localhost with `ctrl+click o command+click` over the URL and enjoy 🚀!
+5. Open your localhost with `ctrl+click o command+click` over the URL and enjoy 🚀!
