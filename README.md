@@ -1,9 +1,10 @@
-# Currency_conversion_app (React + TailwindCSS + TypeScript + Zustand + Vite)
+# Currency_conversion_app
 This is a project about a money currencies conversions app for Teleperformance that allows you to save, view and delete your conversions history too.
 
 Below some important information to keep in mind:
 
 - Made with Vite, React + Typescript, TailwindCSS and Zustand.
+- The user interface kit was inspired by Teleperformance's actual branding.
 
 ## Local installation instructions:
 
