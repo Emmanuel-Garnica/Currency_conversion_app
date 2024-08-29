@@ -14,7 +14,7 @@ export function Loader({ isLoading }: LoaderProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className='grid place-content-center fixed w-full h-full bg-black bg-opacity-25'
+          className='grid place-content-center fixed inset-0 w-full h-full bg-black bg-opacity-50'
         >
           <div className='spinner' />
         </motion.div>

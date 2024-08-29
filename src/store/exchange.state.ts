@@ -2,6 +2,7 @@ import { SupportedCodes } from 'models/exchange.model.ts';
 import { getSupportedCodes } from 'api/exchange.api.ts';
 import { ErrorResponse } from 'models/common.model.ts';
 import { ImmerStateCreator } from 'models/state.model';
+import { Bounce, toast } from 'react-toastify';
 
 export interface ExchangeSlice {
   loading: boolean;
@@ -26,11 +27,17 @@ export const createExchangeSlice: ImmerStateCreator<ExchangeSlice> = (set) => ({
         error: undefined,
       });
     } catch (e) {
+      toast.error('An error was occurred while fetch exchange codes', {
+        pauseOnHover: true,
+        theme: 'dark',
+        transition: Bounce,
+      });
       set((state) => {
         state.error = {
           message: 'An error was occurred while fetch exchange codes',
           error: e,
         };
+        state.loading = false;
       });
     }
   },

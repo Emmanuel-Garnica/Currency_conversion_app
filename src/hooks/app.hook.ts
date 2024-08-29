@@ -1,5 +1,5 @@
 import { Bounce, toast } from 'react-toastify';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
 
@@ -23,6 +23,7 @@ const validations = yup.object<FormValues>().shape({
 });
 
 export const useApp = () => {
+  const initialized = useRef(false);
   const supportedCodes = useStore((state) => state.codes);
   const history = useStore((state) => state.history);
   const isLoading = useStore((state) => state.loading);
@@ -109,11 +110,11 @@ export const useApp = () => {
   };
 
   useEffect(() => {
-    if (supportedCodes.length === 0) {
+    if (supportedCodes.length === 0 && !initialized.current) {
       getSupportedCodes();
+      initialized.current = true;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [getSupportedCodes, supportedCodes.length]);
 
   return {
     result,

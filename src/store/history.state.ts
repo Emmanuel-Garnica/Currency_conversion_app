@@ -2,6 +2,7 @@ import { getConversionByAmount } from 'api/exchange.api';
 import { ImmerStateCreator } from 'models/state.model';
 import { Conversion } from 'models/exchange.model';
 import { ErrorResponse } from 'models/common.model';
+import { Bounce, toast } from 'react-toastify';
 
 export interface History extends Conversion {
   amount: number;
@@ -49,11 +50,17 @@ export const createHistorySlice: ImmerStateCreator<HistorySlice> = (set) => ({
         ];
       });
     } catch (error) {
+      toast.error('An error was occurred while fetch conversion amount', {
+        pauseOnHover: true,
+        theme: 'dark',
+        transition: Bounce,
+      });
       set((state) => {
         state.error = {
           message: 'An error was occurred while fetch conversion amount',
           error,
         };
+        state.loading = false;
       });
     }
   },
