@@ -12,8 +12,9 @@ import { History } from 'store/history.state';
 import { useApp } from 'hooks/app.hook';
 import { getRestTime } from 'utils/time';
 import { Loader } from 'components/loader';
-import { Header } from 'components/header';
-import { Footer } from 'components/footer';
+
+import Header from 'components/header';
+import Footer from 'components/footer';
 
 
 const ExchangeSelect = ({

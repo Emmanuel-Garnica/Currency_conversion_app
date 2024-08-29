@@ -1,4 +1,4 @@
-import AppLogo from '../../assets/images/TP-exchanges-logo.png';
+import AppLogo from '../assets/images/TP-exchanges-logo.png';
 
 const Header = () => {
   return (

@@ -1,5 +1,5 @@
-import AppLogo from "../../assets/images/TP-exchanges-logo.png";
-import { Icons } from "../ui/icons";
+import AppLogo from "../assets/images/TP-exchanges-logo.png";
+import { Icons } from "./ui/icons";
 
 const Footer = () => {
   return (
