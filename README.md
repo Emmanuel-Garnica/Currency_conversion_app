@@ -4,7 +4,7 @@ This is a project about a money currencies conversions app for Teleperformance t
 Below some important information to keep in mind:
 
 - Made with Vite, React + Typescript, TailwindCSS and Zustand.
-- The user interface kit was inspired by Teleperformance's actual branding.
+- The user interface kit was inspired by Teleperformance's current branding.
 
 ## Local installation instructions:
 
